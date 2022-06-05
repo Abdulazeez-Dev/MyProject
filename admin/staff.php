@@ -1,12 +1,13 @@
 <?php 
   include('../functions.php');
+  isLoggedIn();
   include('inventoryModals.php');
 
- /* if (!isAdmin()) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: ../login.php');
-  }*/
-
+// if (!isAdmin()) {
+//     $_SESSION['msg'] = "You must log in first";
+//     header('location: ../login.php');
+  
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
   </head>
-  <body onload="viewdata()">
+  <body>
 
     <nav class="navbar navbar-default">
       <div class="container">
@@ -89,7 +90,7 @@
               <a href="index.php" class="list-group-item active" style="background-color: crimson;">
                 <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard
               </a>
-              <a href="staff.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Manage Staff <span class="badge"><?php  $sql="SELECT * FROM users"; $result=mysqli_query($db,$sql) or die("error getting data");
+              <a href="./staff.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Manage Staff <span class="badge"><?php  $sql="SELECT * FROM users"; $result=mysqli_query($db,$sql) or die("error getting data");
             $num_rows=mysqli_num_rows($result); echo "$num_rows";?></span></a>
               <a href="orders.php" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Manage Orders <span class="badge"><?php  $sql="SELECT * FROM orders"; $result=mysqli_query($db,$sql) or die("error getting data");
             $num_rows=mysqli_num_rows($result); echo "$num_rows";?></span></a>
@@ -137,6 +138,7 @@
                               <a href="register.php" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New Staff</a>
                               <a href="print_staff.php" class="btn btn-success pull-right"><span class="glyphicon glyphicon-print"></span> PDF</a>
                               <p />
+                              
 
                 <table class="table table-striped table-bordered" id="myTable">
                   <thead>
@@ -171,7 +173,9 @@
                   </td>
                 </tr>";
                 include('edit_delete_staff.php');
-              }?>
+              }
+              ?>
+              </tbody>
             </table>
                 </div>
                 

@@ -33,7 +33,9 @@
           </ul>-->
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Brad</a></li>
-            <li><a href="login.php">Logout</a></li>
+            <!-- <li><a href="login.php">Logout</a></li> -->
+            <li><a href="../logout.php">Logout</a></li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

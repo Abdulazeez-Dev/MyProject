@@ -117,7 +117,8 @@
 
 					$_SESSION['user'] = $logged_in_user;
 					$_SESSION['success']  = "You are now logged in";
-					header('location: admin/index.php');		  
+					header('location: admin/index.php');
+							  
 				}else{
 					$_SESSION['user'] = $logged_in_user;
 					$_SESSION['success']  = "You are now logged in";
@@ -132,10 +133,9 @@
 
 	function isLoggedIn()
 	{
-		if (isset($_SESSION['user'])) {
-			return true;
-		}else{
-			return false;
+		if($_SESSION['user'] == "") {
+			$_SESSION["msg"] = '<div class="alert alert-info">Please Login</div>';
+			header("location: ../index.php");
 		}
 	}
 
@@ -144,7 +144,7 @@
 		if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
 			return true;
 		}else{
-			return false;
+			header("location:../index.php");
 		}
 	}
 

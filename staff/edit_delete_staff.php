@@ -251,7 +251,7 @@
 					</div>
 				</div>
 				<hr>
-				<div class="row form-group">
+				<!-- <div class="row form-group">
 					<div class="col-md-6">
 						<label class="control-label modal-label">D.O.B:</label>
 					</div>
@@ -330,7 +330,7 @@
 					<div class="col-md-6">
 					<?php echo $row['salary']; ?>
 					</div>
-				</div>
+				</div> -->
             </div> 
 			</div>
             <div class="modal-footer">

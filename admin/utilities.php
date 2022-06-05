@@ -1,5 +1,6 @@
 <?php
 include '../functions.php';
+isLoggedIn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +31,7 @@ include '../functions.php';
           
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, <?php echo $_SESSION['user']['fulname']; ?></a></li>
-            <li><a href="../login.php">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -236,23 +237,14 @@ echo "<script language=javascript> alert(\"Please Enter second value.\");</scrip
 <form>
 
 <table style="border:groove #00FF99;text-align: center;">
-
             <tr>
-
                 <td >Amount</td>
 
                 <td colspan="1">
-
-               
-
                     <input name="fvalue" type="text" style="color:red"/ placeholder="Input First Amount"></td>
-
             <tr>
-
                 <td >Operator</td>
-
                 <td>
-
                     <select name="operator" style="width: 63px">
 
 <option>+</option>
