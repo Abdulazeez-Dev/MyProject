@@ -85,6 +85,13 @@
         
          <!-- Carousel
     ================================================== -->
+    <?php
+      if(isset($_SESSION["msg"])){
+        echo $_SESSION["msg"];
+      }
+      unset($_SESSION["msg"]);
+
+    ?>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">

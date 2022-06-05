@@ -15,17 +15,10 @@
 				<td>".$row['address']."</td>
 				<td>".$row['phone']."</td>
 				<td>".$row['email']."</td>
-				<td>".$row['user_type']."</td>
 				<td>".$row['username']."</td>
-				<td>".$row['dob']."</td>
-				<td>".$row['gender']."</td>
-				<td>".$row['state']."</td>
-				<td>".$row['lga']."</td>
-				<td>".$row['maritalstatus']."</td>
-				<td>".$row['EmployedOn']."</td>
-				<td>".$row['accountname']."</td>
-				<td>".$row['accountnumber']."</td>
-				<td>".$row['salary']."</td>
+				<td>".$row['user_type']."</td>
+				
+				
 			</tr>
 			";
 		}
@@ -80,15 +73,7 @@
 				<th>Email</th>  
 				<th>Username</th>
 				<th>Role</th>
-				<th>D.O.B</th>
-				<th>Gender</th>
-				<th>State</th>
-				<th>LGA</th>
-				<th>Marital Status</th>
-				<th>Hired On</th>
-				<th>Account Name</th>
-				<th>Account Number</th>
-				<th>Salary</th>
+				
            </tr>  
       ';  
 

@@ -10,16 +10,17 @@
 		$email 			= $_POST['email'];				//Email
 		$user_type 		= $_POST['user_type'];			//user_type
 		$username 		= $_POST['username'];			//username
-		$dob 			= $_POST['dob'];				//Date Of Birth
-		$gender 		= $_POST['gender'];				//gender
-		$state 			= $_POST['state'];				//state
-		$lga 			= $_POST['lga']; 				//lga
-		$maritalstatus 	= $_POST['maritalstatus']; 		//maritalstatus
-		$EmployedOn 	= $_POST['EmployedOn'];			//EmployedOn
-		$accountname	= $_POST['accountname'];		//accountname
-		$accountnumber 	= $_POST['accountnumber'];		//accountmunber
-		$salary 		= $_POST['salary'];				//salary
-		$sql = "UPDATE users SET fulname = '$fulname', address = '$address', phone = '$phone', email = '$email', user_type = '$user_type', username = '$username', dob= '$dob', gender = '$gender', state = '$state', lga = '$lga', maritalstatus = '$maritalstatus', EmployedOn = '$EmployedOn', accountname ='$accountname', accountnumber = '$accountnumber', salary = '$salary' WHERE id = '$id'";
+		$password = $_POST["password_1"];
+		//$dob 			= $_POST['dob'];				//Date Of Birth
+		//$gender 		= $_POST['gender'];				//gender
+		//$state 			= $_POST['state'];				//state
+		//$lga 			= $_POST['lga']; 				//lga
+		//$maritalstatus 	= $_POST['maritalstatus']; 		//maritalstatus
+		//$EmployedOn 	= $_POST['EmployedOn'];			//EmployedOn
+		//$accountname	= $_POST['accountname'];		//accountname
+		//$accountnumber 	= $_POST['accountnumber'];		//accountmunber
+		//$salary 		= $_POST['salary'];				//salary
+		$sql = "UPDATE users SET fulname = '$fulname', address = '$address', phone = '$phone', email = '$email', user_type = '$user_type', username = '$username', password ='$password' WHERE id = '$id'";
 
 		//use for MySQLi OOP
 		if($db->query($sql)){

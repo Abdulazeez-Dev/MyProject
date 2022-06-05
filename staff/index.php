@@ -1,5 +1,6 @@
 <?php 
   include('../functions.php');
+  isLoggedIn();
   include('inventoryModals.php');
 
   // if(!isAdmin()) {

@@ -1,5 +1,6 @@
 <?php
 include '../functions.php';
+isLoggedIn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,7 @@ include '../functions.php';
           </ul>-->
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, <?php echo $_SESSION['user']['fulname']; ?></a></li>
-            <li><a href="../login.php">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -113,6 +114,13 @@ include '../functions.php';
             </div>-->
           </div>
           <div class="col-md-9">
+            <?php
+            if(isset($_SESSION["msg"])){
+              echo $_SESSION["msg"];
+            }
+            unset($_SESSION["msg"]);
+
+            ?>
             <!-- Website Overview -->
             <div class="panel panel-default">
               <div class="panel-heading" style="background-color: crimson;border-color: purple;color: white;">
@@ -138,12 +146,13 @@ include '../functions.php';
         <div class="col-sm-6">
             <div>
                 <form action="sendsms.php" method="post">
-                    <label>Phone Number</label>
-                    <input type="text" name="phone" class="form-control" value="">
+                <input type="hidden" name="sendName" class="form-control" value="<?php echo $_SESSION['user']['fulname'];?>">
+                <input type="hidden" name="sendEmail" class="form-control" value="<?php echo $_SESSION['user']['email'];?>">
+                    <label>Subject</label>
+                    <input type="text" name="subject" class="form-control" >
                     <label>Message</label>
                     <textarea name="message" class="form-control"></textarea><br/>
-
-                    <button class="btn btn-primary">Send SMS</button>
+                    <input type="submit" name="send" id="" class="btn btn-primary" value="Send SMS">
                 </form>
             </div>
         </div>

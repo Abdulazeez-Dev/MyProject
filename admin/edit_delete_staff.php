@@ -50,7 +50,7 @@
 					</div>
 					<div class="col-md-6">
 						<select name="user_type" id="user_type" >
-				        <option value="<?php echo $row['user_type']; ?>"></option>
+				        <option value="<?php echo $row['user_type']; ?>"><?php echo $row['user_type']; ?></option>
 				        <option value="admin">Admin</option>
 				        <option value="user">User</option>
 				        <option value="tailor">Tailor</option>
@@ -81,7 +81,7 @@
 						<input type="password" class="form-control" name="password_2" placeholder="Comfirm Password">
 					</div>
 				</div>
-				<div style="font-weight: bolder;text-align: center;">Other Informations</div>
+				<!-- <div style="font-weight: bolder;text-align: center;">Other Informations</div>
 				<div class="row form-group">
 					<div class="col-sm-2">
 						<label class="control-label modal-label">D.O.B:</label>
@@ -154,7 +154,7 @@
 					<div class="col-sm-10">
 						<input type="text" class="form-control" name="salary" value="<?php echo $row['salary']; ?>">
 					</div>
-				</div>
+				</div> -->
             </div> 
 			</div>
             <div class="modal-footer">
@@ -251,7 +251,7 @@
 					</div>
 				</div>
 				<hr>
-				<div class="row form-group">
+				<!-- <div class="row form-group">
 					<div class="col-md-6">
 						<label class="control-label modal-label">D.O.B:</label>
 					</div>
@@ -330,7 +330,7 @@
 					<div class="col-md-6">
 					<?php echo $row['salary']; ?>
 					</div>
-				</div>
+				</div> -->
             </div> 
 			</div>
             <div class="modal-footer">

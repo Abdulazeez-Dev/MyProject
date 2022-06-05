@@ -1,5 +1,6 @@
 <?php
 include '../functions.php';
+isLoggedIn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,7 @@ include '../functions.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin | Utilities</title>
+    <title>Staff | Utilities</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -30,7 +31,7 @@ include '../functions.php';
           
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, <?php echo $_SESSION['user']['fulname']; ?></a></li>
-            <li><a href="../login.php">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
