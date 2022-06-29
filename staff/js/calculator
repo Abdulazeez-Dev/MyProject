@@ -1,4 +1,0 @@
-$(".numberButton").click(function()
-{
-    $(".outputBox").append($(this).html());
-});
